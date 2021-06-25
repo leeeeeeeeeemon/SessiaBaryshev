@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button HorizontalAlignment="Left" Height="53" Margin="634,258,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click">
-            <TextBlock x:Name="addOblectText" TextWrapping="Wrap" Text="Новая книга"/>
+        <Button HorizontalAlignment="Left" Height="53" Margin="626,258,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click">
+            <TextBlock x:Name="addBook" TextWrapping="Wrap" Text="Новая книга"/>
         </Button>
         <DataGrid x:Name="booksTable" HorizontalAlignment="Left" Height="284" Margin="44,27,0,0" VerticalAlignment="Top" Width="562" ItemsSource="{Binding}" AutoGenerateColumns="True" HorizontalGridLinesBrush="DarkGray"
-    RowBackground="LightGray" AlternatingRowBackground="White">
+    RowBackground="LightGray" AlternatingRowBackground="White" Visibility="Hidden">
             <DataGrid.Items>
-                <local:Book nameObject="Война и Мир" Author="Толстой" Illustrator="" Publisher="Толстой" bornYear="1986" ownerName="Emil" dateInLibrary="2003.09.20" ></local:Book>
+                
             </DataGrid.Items>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Binding="{Binding Path=nameObject}"></DataGridTextColumn>
@@ -26,7 +26,24 @@
             </DataGrid.Columns>
 
         </DataGrid>
+        <DataGrid x:Name="pazzleTable" HorizontalAlignment="Left" Height="284" Margin="44,27,0,0" VerticalAlignment="Top" Width="562" ItemsSource="{Binding}" AutoGenerateColumns="True" HorizontalGridLinesBrush="DarkGray"
+    RowBackground="LightGray" AlternatingRowBackground="White">
+            <DataGrid.Items>
+
+            </DataGrid.Items>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding Path=nameObject}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Количество элементов" Binding="{Binding Path= valueElements}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Компания-производитель" Binding="{Binding Path= Illustrator}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Владелец" Binding="{Binding Path= ownerName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Поступила в библиотеку" Binding="{Binding Path= dateInLibrary}"></DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
         <Button x:Name="fillButton" Content="Заполнить" HorizontalAlignment="Left" Margin="44,325,0,0" VerticalAlignment="Top" Width="75" Click="fillButton_Click"/>
+        <Button x:Name="addPazzleButton" HorizontalAlignment="Left" Height="53" Margin="626,316,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click">
+            <TextBlock x:Name="addBook1" TextWrapping="Wrap" Text="Новый пазл"/>
+        </Button>
 
     </Grid>
 </Window>

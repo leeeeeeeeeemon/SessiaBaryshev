@@ -5,22 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SessiaBaryshev"
         mc:Ignorable="d"
-        Title="Window1" Height="351" Width="207">
-    <Grid Margin="0,0,0,-95" Height="415" VerticalAlignment="Top">
+        Title="Window1" Height="400" Width="207">
+    <Grid Margin="0,0,-37,-95" Height="415" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236">
         <TextBox x:Name="nameObject" HorizontalAlignment="Left" Height="23" Margin="37,48,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
         <TextBox x:Name="AuthorBook" HorizontalAlignment="Left" Height="23" Margin="37,86,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="IllustratorBook" HorizontalAlignment="Left" Height="23" Margin="37,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" />
-        <TextBox x:Name="PublisherBook" HorizontalAlignment="Left" Height="23" Margin="37,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" />
+        <TextBox x:Name="IllustratorBook" HorizontalAlignment="Left" Height="23" Margin="37,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="PublisherBook" HorizontalAlignment="Left" Height="23" Margin="37,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
         <TextBox x:Name="bornYearBook" HorizontalAlignment="Left" Height="23" Margin="37,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <Button x:Name="createButton" Content="Создать" HorizontalAlignment="Left" Margin="10,289,0,0" VerticalAlignment="Top" Width="75" Click="createButton_Click"/>
-        <Button x:Name="endAddButton" Content="Отмена" HorizontalAlignment="Left" Margin="114,289,0,0" VerticalAlignment="Top" Width="75" Click="endAddButton_Click"/>
+        <Button x:Name="createButton" Content="Создать" HorizontalAlignment="Left" Margin="10,326,0,0" VerticalAlignment="Top" Width="75" Click="createButton_Click"/>
+        <Button x:Name="endAddButton" Content="Отмена" HorizontalAlignment="Left" Margin="114,326,0,0" VerticalAlignment="Top" Width="75" Click="endAddButton_Click"/>
         <Label Content="Название книги" HorizontalAlignment="Left" Margin="37,30,0,0" VerticalAlignment="Top" Width="100"/>
         <Label Content="Автор" HorizontalAlignment="Left" Margin="37,68,0,0" VerticalAlignment="Top" Width="100"/>
         <Label Content="Иллюстротор" HorizontalAlignment="Left" Margin="37,107,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label Content="Издательство" HorizontalAlignment="Left" Margin="37,148,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Издательство" HorizontalAlignment="Left" Margin="37,143,0,0" VerticalAlignment="Top" Width="100" Height="23"/>
         <Label Content="Год издания" HorizontalAlignment="Left" Margin="37,189,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="bornYearBook_Copy" HorizontalAlignment="Left" Height="23" Margin="37,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="nameOwner" HorizontalAlignment="Left" Height="23" Margin="37,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
         <Label Content="Хозяин книги" HorizontalAlignment="Left" Margin="37,230,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="dateinlibrary" HorizontalAlignment="Left" Height="23" Margin="37,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label Content="Поступила в биб." HorizontalAlignment="Left" Margin="37,271,0,0" VerticalAlignment="Top" Width="120"/>
 
 
     </Grid>
