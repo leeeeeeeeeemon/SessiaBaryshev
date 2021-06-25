@@ -57,6 +57,12 @@ namespace SessiaBaryshev
             pazzleTable.Items.Refresh();
 
         }
+
+        private void addPazzleButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 w2 = new Window2(this);
+            w2.Show();
+        }
     }
 
 

@@ -5,16 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SessiaBaryshev"
         mc:Ignorable="d"
-        Title="Window2" Height="333.576" Width="241.424">
-    <Grid x:Name="nameObject">
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="57,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        Title="Window2" Height="385.902" Width="241.424">
+    <Grid Margin="0,0,0,4">
+        <TextBox x:Name="nameObject" HorizontalAlignment="Left" Height="23" Margin="57,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Название" HorizontalAlignment="Left" Margin="57,45,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="ValueElements" HorizontalAlignment="Left" Height="23" Margin="57,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Количество элементов" HorizontalAlignment="Left" Margin="57,94,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="Company" HorizontalAlignment="Left" Height="23" Margin="57,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Компания-производитель" HorizontalAlignment="Left" Margin="57,148,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="addPazzleButton" Content="Создать" HorizontalAlignment="Left" Margin="29,240,0,0" VerticalAlignment="Top" Width="75" Click="addPazzleButton_Click"/>
-        <Button x:Name="cancelButton" Content="Отмена" HorizontalAlignment="Left" Margin="120,240,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="addPazzleButton" Content="Создать" HorizontalAlignment="Left" Margin="45,321,0,0" VerticalAlignment="Top" Width="75" Click="addPazzleButton_Click"/>
+        <Button x:Name="cancelButton" Content="Отмена" HorizontalAlignment="Left" Margin="136,321,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="nameOwner" HorizontalAlignment="Left" Height="23" Margin="57,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Хозяин" HorizontalAlignment="Left" Margin="57,198,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="dateInLibrary" HorizontalAlignment="Left" Height="23" Margin="57,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="поступила в биб." HorizontalAlignment="Left" Margin="57,252,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

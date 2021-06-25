@@ -48,9 +48,10 @@ namespace SessiaBaryshev
         public int valueElements { get; set; }
         public string company { get; set; }
 
-        public Pazzle(string nameObj, string nameOwner, string dateInLibrary, int valueelements, string company) : base(nameObj, nameOwner, dateInLibrary)
+        public Pazzle(string nameObj, string nameOwner, string dateInLibrary, int valueelements, string companY) : base(nameObj, nameOwner, dateInLibrary)
         {
-
+            valueElements = valueelements;
+            company = companY;
         }
     }
 

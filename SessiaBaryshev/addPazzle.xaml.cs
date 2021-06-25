@@ -28,7 +28,8 @@ namespace SessiaBaryshev
 
         private void addPazzleButton_Click(object sender, RoutedEventArgs e)
         {
-
+            mw.AddPazzlesGridViewRows(new Pazzle(nameObject.Text, nameOwner.Text, dateInLibrary.Text, Convert.ToInt32(ValueElements.Text), Company.Text));
+            
         }
     }
 }
