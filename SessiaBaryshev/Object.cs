@@ -9,9 +9,9 @@ namespace SessiaBaryshev
 {
     public class Object
     {
-        public string nameObject { get; set; }
-        public string ownerName { get; set; }
-        public string dateInLibrary { get; set; } //year, month, day
+        public string nameObject { get; protected set; }
+        public string ownerName { get; protected set; }
+        public string dateInLibrary { get; protected set; } //year, month, day
         public Object(string nameObj, string nameOwner, string dateinlibrary)
         {
             nameObject = nameObj;
@@ -22,10 +22,10 @@ namespace SessiaBaryshev
 
     public class Book : Object
     {
-        public string Author { get; set;}
-        public string Illustrator { get; set; }
-        public string Publisher { get; set; } = "";
-        public int bornYear { get; set; }
+        public string Author { get; protected set; }
+        public string Illustrator { get; protected set; }
+        public string Publisher { get; protected set; } = "";
+        public int bornYear { get; protected set; }
 
         public Book(string nameObj, string nameOwner, string dateInLibrary, string author, string illustrator, string publisher, int bornyear) : base(nameObj,nameOwner,dateInLibrary)
         {
@@ -45,8 +45,8 @@ namespace SessiaBaryshev
 
         public class Pazzle : Object
         {
-        public int valueElements { get; set; }
-        public string company { get; set; }
+        public int valueElements { get; protected set; }
+        public string company { get; protected set; }
 
         public Pazzle(string nameObj, string nameOwner, string dateInLibrary, int valueelements, string companY) : base(nameObj, nameOwner, dateInLibrary)
         {
@@ -57,9 +57,9 @@ namespace SessiaBaryshev
 
         public class tableGame : Object
         {
-        public string Developer { get; set; }
-        public string GamePlay { get; set; }
-        public string valuePeople { get; set; }
+        public string Developer { get; protected set; }
+        public string GamePlay { get; protected set; }
+        public string valuePeople { get; protected set; }
 
         public tableGame(string nameObj, string nameOwner, string dateInLibrary, string developer, string gameplay, string valuepeople) : base(nameObj, nameOwner, dateInLibrary)
         {
