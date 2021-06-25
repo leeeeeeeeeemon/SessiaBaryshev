@@ -14,6 +14,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SessiaBaryshev;
+using System.Reflection;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Data;
+using System.Windows.Forms;
 
 namespace SessiaBaryshev
 {
@@ -29,8 +33,6 @@ namespace SessiaBaryshev
         {
             InitializeComponent();
         }
-
-        public string[] owners = new string[4] { "Emil", "Danil", "Diyar", "Marsell" };
         
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -83,6 +85,27 @@ namespace SessiaBaryshev
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        void SaveTable(DataGridView What_save)
+        {
+            string path = System.IO.Directory.GetCurrentDirectory() + @"\" + "Save_Excel.xlsx";
+
+            Excel.Application excelapp = new Excel.Application();
+            Excel.Workbook workbook = excelapp.Workbooks.Add();
+            Excel.Worksheet worksheet = workbook.ActiveSheet;
+
+            for (int i = 1; i < What_save.RowCount + 1; i++)
+            {
+                for (int j = 1; j < What_save.ColumnCount + 1; j++)
+                {
+                    worksheet.Rows[i].Columns[j] = What_save.Rows[i - 1].Cells[j - 1].Value;
+                }
+            }
+            excelapp.AlertBeforeOverwriting = false;
+            workbook.SaveAs(path);
+            excelapp.Quit();
+
         }
     }
 

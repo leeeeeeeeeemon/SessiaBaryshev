@@ -29,16 +29,15 @@ namespace SessiaBaryshev
         private void addPazzleButton_Click(object sender, RoutedEventArgs e)
         {
             bool right = true;
-            if(nameObject.Text == "" || nameOwner.Text == "" || dateInLibrary.Text == "" || ValueElements.Text == ""|| Company.Text == "")
+            if (nameObject.Text == "" || nameOwner.Text == "" || dateInLibrary.Text == "" || ValueElements.Text == "" || Company.Text == "" || Convert.ToInt32(ValueElements.Text) < 1 || Convert.ToInt32(dateInLibrary.Text) <  1)
             {
                 right = false;
                 MessageBox.Show("Неверно введенны данные");
             }
-            if (right)
-            {
-                mw.AddPazzlesGridViewRows(new Pazzle(nameObject.Text, nameOwner.Text, dateInLibrary.Text, Convert.ToInt32(ValueElements.Text), Company.Text));
-                this.addPzzleWindow.Close();
-            }
+            if (right) { 
+            mw.AddPazzlesGridViewRows(new Pazzle(nameObject.Text, nameOwner.Text, dateInLibrary.Text, Convert.ToInt32(ValueElements.Text), Company.Text));
+            this.addPzzleWindow.Close();
+                }
         }
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)

@@ -34,7 +34,22 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Binding="{Binding Path=nameObject}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Количество элементов" Binding="{Binding Path= valueElements}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Компания-производитель" Binding="{Binding Path= Illustrator}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Компания-производитель" Binding="{Binding Path= company}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Владелец" Binding="{Binding Path= ownerName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Поступила в библиотеку" Binding="{Binding Path= dateInLibrary}"></DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <DataGrid x:Name="tableGameTable" HorizontalAlignment="Left" Height="284" Margin="22,103,0,0" VerticalAlignment="Top" Width="562" ItemsSource="{Binding}" AutoGenerateColumns="True" HorizontalGridLinesBrush="DarkGray"
+    RowBackground="LightGray" AlternatingRowBackground="White" Visibility="Hidden">
+            <DataGrid.Items>
+
+            </DataGrid.Items>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding Path=nameObject}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Количество элементов" Binding="{Binding Path= Developer}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Компания-производитель" Binding="{Binding Path= GamePlay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Кол-во людей" Binding="{Binding Path= valuePeople}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Владелец" Binding="{Binding Path= ownerName}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Поступила в библиотеку" Binding="{Binding Path= dateInLibrary}"></DataGridTextColumn>
             </DataGrid.Columns>
@@ -49,6 +64,9 @@
             </ComboBoxItem>
             <ComboBoxItem >
                 <TextBlock Foreground="Red">Pazzle</TextBlock>
+            </ComboBoxItem>
+            <ComboBoxItem >
+                <TextBlock Foreground="Green">gameTable</TextBlock>
             </ComboBoxItem>
         </ComboBox>
         <Button x:Name="showTableButton" Content="показать" HorizontalAlignment="Left" Margin="167,39,0,0" VerticalAlignment="Top" Width="75" Click="showTableButton_Click"/>

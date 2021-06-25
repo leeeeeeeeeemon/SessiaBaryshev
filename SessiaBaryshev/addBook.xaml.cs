@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using SessiaBaryshev;
 
+
+
 namespace SessiaBaryshev
 {
     /// <summary>
@@ -42,7 +44,7 @@ namespace SessiaBaryshev
         private void createButton_Click(object sender, RoutedEventArgs e)
         {
             bool right = true;
-            if(nameObject.Text == "" || nameOwner.Text == "" || dateinlibrary.Text == "" || AuthorBook.Text == "" || PublisherBook.Text == "" || bornYearBook.Text == "")
+            if(nameObject.Text == "" || nameOwner.Text == "" || dateinlibrary.Text == "" || AuthorBook.Text == "" || PublisherBook.Text == "" || bornYearBook.Text == "" || Convert.ToInt32(dateinlibrary.Text) <1 || Convert.ToInt32(bornYearBook.Text) <1)
             {
                 right = false;
                 MessageBox.Show("Введенны неверные данные");
