@@ -43,17 +43,20 @@ namespace SessiaBaryshev
             
         }
 
-        public void AddGridViewRows(Book kniga)
+        public void AddBooksGridViewRows(Book kniga)
         {
-           
-
         //Add rows to grid view.
         booksTable.Items.Add(kniga);
-            booksTable.Items.Refresh();
-        //booksTable.
+        booksTable.Items.Refresh();
+       
+        }
+        public void AddPazzlesGridViewRows(Pazzle pazzle)
+        {
+            //Add rows to grid view.
+            pazzleTable.Items.Add(pazzle);
+            pazzleTable.Items.Refresh();
 
-        //Refresh the grid
-    }
+        }
     }
 
 

@@ -60,6 +60,9 @@
     <Compile Include="addBook.xaml.cs">
       <DependentUpon>addBook.xaml</DependentUpon>
     </Compile>
+    <Compile Include="addPazzle.xaml.cs">
+      <DependentUpon>addPazzle.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,6 +78,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="addBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addPazzle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

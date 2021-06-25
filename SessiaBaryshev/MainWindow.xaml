@@ -26,7 +26,7 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <DataGrid x:Name="pazzleTable" HorizontalAlignment="Left" Height="284" Margin="44,27,0,0" VerticalAlignment="Top" Width="562" ItemsSource="{Binding}" AutoGenerateColumns="True" HorizontalGridLinesBrush="DarkGray"
+        <DataGrid x:Name="pazzleTable" HorizontalAlignment="Left" Height="284" Margin="22,85,0,0" VerticalAlignment="Top" Width="562" ItemsSource="{Binding}" AutoGenerateColumns="True" HorizontalGridLinesBrush="DarkGray"
     RowBackground="LightGray" AlternatingRowBackground="White">
             <DataGrid.Items>
 
@@ -40,7 +40,6 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Button x:Name="fillButton" Content="Заполнить" HorizontalAlignment="Left" Margin="44,325,0,0" VerticalAlignment="Top" Width="75" Click="fillButton_Click"/>
         <Button x:Name="addPazzleButton" HorizontalAlignment="Left" Height="53" Margin="626,316,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click">
             <TextBlock x:Name="addBook1" TextWrapping="Wrap" Text="Новый пазл"/>
         </Button>

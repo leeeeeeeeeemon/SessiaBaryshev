@@ -50,7 +50,7 @@ namespace SessiaBaryshev
             }
             if (right)
             {
-                mw.AddGridViewRows(new Book(nameObject.Text, nameOwner.Text, dateinlibrary.Text, AuthorBook.Text, IllustratorBook.Text, PublisherBook.Text, Convert.ToInt32(bornYearBook.Text)));
+                mw.AddBooksGridViewRows(new Book(nameObject.Text, nameOwner.Text, dateinlibrary.Text, AuthorBook.Text, IllustratorBook.Text, PublisherBook.Text, Convert.ToInt32(bornYearBook.Text)));
                 this.addWindow.Close();
             }
         }
