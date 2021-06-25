@@ -29,8 +29,19 @@ namespace SessiaBaryshev
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            addForm newForm = new addForm();
+            Window1 newForm = new Window1();
             newForm.Show();
         }
+    }
+
+    public class BooksTable
+    {
+        public string Object { get; set; }
+        public string NameObject { get; set; }
+        public string Author { get; set; }
+        public string Illustartor { get; set; }
+        public string Publisher { get; set; }
+        public int bornYear { get; set; }
+        public string ownerName { get; set; }
     }
 }

@@ -1,0 +1,32 @@
+﻿<Window x:Name="addWindow" x:Class="SessiaBaryshev.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SessiaBaryshev"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="showCharacteristic" HorizontalAlignment="Left" Margin="210,23,0,0" VerticalAlignment="Top" Width="113" Click="Button_Click" Height="38">
+            <TextBlock TextWrapping="Wrap" Text="Показать свойства объекта"/>
+        </Button>
+        <ComboBox x:Name="objects" HorizontalAlignment="Left" Margin="44,39,0,0" VerticalAlignment="Top" Width="120" ContextMenuClosing="objects_ContextMenuClosing">
+            <ComboBox.ItemsSource>
+                <CompositeCollection>
+                    <ComboBoxItem Content="Book" Tag="0" TabIndex="0"/>
+                    <ComboBoxItem Content="Pazzle" Tag="1"/>
+                    <ComboBoxItem Content="Table game" Tag="2"/>
+                </CompositeCollection>
+            </ComboBox.ItemsSource>
+
+        </ComboBox>
+        <TextBox x:Name="nameObject" HorizontalAlignment="Left" Height="23" Margin="44,76,0,0" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="AuthorBook" HorizontalAlignment="Left" Height="23" Margin="44,114,0,0" TextWrapping="Wrap" Text="Автор" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="IllustratorBook" HorizontalAlignment="Left" Height="23" Margin="44,153,0,0" TextWrapping="Wrap" Text="Иллюстратор" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="PublisherBook" HorizontalAlignment="Left" Height="23" Margin="44,194,0,0" TextWrapping="Wrap" Text="Издательство" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="bornYearBook" HorizontalAlignment="Left" Height="23" Margin="44,235,0,0" TextWrapping="Wrap" Text="Год издания" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Button x:Name="createButton" Content="Создать" HorizontalAlignment="Left" Margin="44,276,0,0" VerticalAlignment="Top" Width="75"/>
+
+
+    </Grid>
+</Window>

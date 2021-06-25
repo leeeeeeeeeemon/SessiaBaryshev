@@ -18,7 +18,7 @@ namespace SessiaBaryshev
             public string Author;
             public string Illustrator;
             public string Publisher;
-            public DateTime bornYear;
+            public int bornYear;
         }
 
         class Puzzle : Object

@@ -7,9 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button HorizontalAlignment="Left" Height="53" Margin="577,197,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Height="53" Margin="664,356,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click">
             <TextBlock x:Name="addOblectText" TextWrapping="Wrap" Text="Новый объект"/>
         </Button>
+        <DataGrid x:Name="objects" HorizontalAlignment="Left" Height="284" Margin="44,27,0,0" VerticalAlignment="Top" Width="562" ItemsSource="{Binding}" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
+    RowBackground="LightGray" AlternatingRowBackground="White">
+            <DataGrid.Items>
+                <local:BooksTable Object="Книга" Author="Толстой" NameObject="Война и Мир"  Illustartor="" Publisher="я" bornYear="1703" ownerName="Emil"></local:BooksTable>
+            </DataGrid.Items>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Обьект" Binding="{Binding Path=Object}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Автор" Binding="{Binding Path= Author}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Иллюстратор" Binding="{Binding Path= Illustartor}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Издательство" Binding="{Binding Path= Publisher}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Год издания" Binding="{Binding Path= bornYear}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Владелец" Binding="{Binding Path= ownerName}"></DataGridTextColumn>
+            </DataGrid.Columns>
+            
+        </DataGrid>
 
     </Grid>
 </Window>
