@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,6 +63,26 @@ namespace SessiaBaryshev
         {
             Window2 w2 = new Window2(this);
             w2.Show();
+        }
+
+        private void showTableButton_Click(object sender, RoutedEventArgs e)
+        {
+            switch (tableName.SelectedIndex)
+            {
+                case 0:
+                    pazzleTable.Visibility = Visibility.Hidden;
+                    booksTable.Visibility = Visibility.Visible;
+                    break;
+                case 1:
+                    pazzleTable.Visibility = Visibility.Visible;
+                    booksTable.Visibility = Visibility.Hidden;
+                    break;
+            }
+        }
+
+        private void saveButton_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 

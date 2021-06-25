@@ -10,10 +10,10 @@
         <Button HorizontalAlignment="Left" Height="53" Margin="626,258,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click">
             <TextBlock x:Name="addBook" TextWrapping="Wrap" Text="Новая книга"/>
         </Button>
-        <DataGrid x:Name="booksTable" HorizontalAlignment="Left" Height="284" Margin="44,27,0,0" VerticalAlignment="Top" Width="562" ItemsSource="{Binding}" AutoGenerateColumns="True" HorizontalGridLinesBrush="DarkGray"
-    RowBackground="LightGray" AlternatingRowBackground="White" Visibility="Hidden">
+        <DataGrid x:Name="booksTable" HorizontalAlignment="Left" Height="284" Margin="22,103,0,0" VerticalAlignment="Top" Width="562" ItemsSource="{Binding}" AutoGenerateColumns="True" HorizontalGridLinesBrush="DarkGray"
+    RowBackground="LightGray" AlternatingRowBackground="White" RenderTransformOrigin="0.471,0.676">
             <DataGrid.Items>
-                
+
             </DataGrid.Items>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Binding="{Binding Path=nameObject}"></DataGridTextColumn>
@@ -26,8 +26,8 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <DataGrid x:Name="pazzleTable" HorizontalAlignment="Left" Height="284" Margin="22,85,0,0" VerticalAlignment="Top" Width="562" ItemsSource="{Binding}" AutoGenerateColumns="True" HorizontalGridLinesBrush="DarkGray"
-    RowBackground="LightGray" AlternatingRowBackground="White">
+        <DataGrid x:Name="pazzleTable" HorizontalAlignment="Left" Height="284" Margin="22,103,0,0" VerticalAlignment="Top" Width="562" ItemsSource="{Binding}" AutoGenerateColumns="True" HorizontalGridLinesBrush="DarkGray"
+    RowBackground="LightGray" AlternatingRowBackground="White" Visibility="Hidden">
             <DataGrid.Items>
 
             </DataGrid.Items>
@@ -43,6 +43,16 @@
         <Button x:Name="addPazzleButton" HorizontalAlignment="Left" Height="53" Margin="626,316,0,0" VerticalAlignment="Top" Width="87" Click="addPazzleButton_Click" >
             <TextBlock x:Name="addBook1" TextWrapping="Wrap" Text="Новый пазл"/>
         </Button>
+        <ComboBox x:Name="tableName" HorizontalAlignment="Left" Margin="22,39,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem >
+                <TextBlock Foreground="Blue">Book</TextBlock>
+            </ComboBoxItem>
+            <ComboBoxItem >
+                <TextBlock Foreground="Red">Pazzle</TextBlock>
+            </ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="showTableButton" Content="показать" HorizontalAlignment="Left" Margin="167,39,0,0" VerticalAlignment="Top" Width="75" Click="showTableButton_Click"/>
+        <Button x:Name="saveButton" Content="Сохранить" HorizontalAlignment="Left" Margin="626,389,0,0" VerticalAlignment="Top" Width="87" Click="saveButton_Click"/>
 
     </Grid>
 </Window>
