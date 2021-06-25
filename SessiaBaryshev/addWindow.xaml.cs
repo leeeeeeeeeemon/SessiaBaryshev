@@ -35,19 +35,16 @@ namespace SessiaBaryshev
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+       
+
+        private void createButton_Click(object sender, RoutedEventArgs e)
         {
-            switch (objects.SelectedIndex)
-            {
-                case 0:
-                    MessageBox.Show("Kniga");
-                    AuthorBook.Visibility = Visibility.Visible;
-                    IllustratorBook.Visibility = Visibility.Visible;
-                    PublisherBook.Visibility = Visibility.Visible;
-                    bornYearBook.Visibility = Visibility.Visible;
-                    
-                    break;
-            }
+            
+        }
+
+        private void endAddButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.addWindow.Close();
         }
     }
 }

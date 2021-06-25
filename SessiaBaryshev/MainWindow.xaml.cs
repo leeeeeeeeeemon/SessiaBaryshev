@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SessiaBaryshev;
+
 namespace SessiaBaryshev
 {
     /// <summary>
@@ -25,23 +26,28 @@ namespace SessiaBaryshev
             InitializeComponent();
         }
 
-        public string[] owners = new string[4] { "Emil", "Danil", "Diar", "Marsell" };
+        public string[] owners = new string[4] { "Emil", "Danil", "Diyar", "Marsell" };
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Window1 newForm = new Window1();
             newForm.Show();
         }
+
+        private void fillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        //public void AddGridViewRows(Book kniga)
+        //{
+            
+            // Add rows to grid view.
+           // booksTable.Items.Add(kniga);
+
+            // Refresh the grid
+       // }
     }
 
-    public class BooksTable
-    {
-        public string Object { get; set; }
-        public string NameObject { get; set; }
-        public string Author { get; set; }
-        public string Illustartor { get; set; }
-        public string Publisher { get; set; }
-        public int bornYear { get; set; }
-        public string ownerName { get; set; }
-    }
+    
 }
